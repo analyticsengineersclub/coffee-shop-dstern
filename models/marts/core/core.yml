@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: customers
+    description: '{{ doc("customers") }}'
+    columns:
+      - name: customer_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+  - name: orders
+    columns:
+      - name: order_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+  - name: order_items
+    columns:
+      - name: order_item_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+  - name: products
+    columns:
+      - name: product_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+  - name: product_prices
+    columns:
+      - name: product_price_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
