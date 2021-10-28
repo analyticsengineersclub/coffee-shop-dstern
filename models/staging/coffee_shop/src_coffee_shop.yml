@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: coffee_shop
+    project: analytics-engineers-club
+    description: This is snapshot of our OLTP data, not updated.
+    tables:
+      - name: customers
+        columns: 
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: orders
+        columns:
+          - name: id
+            tests: 
+              - unique
+              - not_null
+
+      - name: products
+        columns: 
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: product_prices
+        columns:
+          - name: id
+            tests: 
+              - unique
+              - not_null
+
+      - name: order_items
+        columns: 
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+            
