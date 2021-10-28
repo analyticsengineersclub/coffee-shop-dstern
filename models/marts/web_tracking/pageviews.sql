@@ -11,7 +11,11 @@ with pageviews as (
 )
 
 select  pageviews.pageview_id,
-        pageviews.visitor_id,
+        case when users.customer_id is not null 
+            then first_value(pageviews.visitor_id) 
+                over (partition by users.customer_id order by pageviews.created_at asc)
+            else pageviews.visitor_id 
+            end as visitor_id,
         users.customer_id,
         pageviews.created_at, 
         pageviews.page,
