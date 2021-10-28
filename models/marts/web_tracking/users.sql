@@ -10,6 +10,7 @@ with pageviews as (
            customer_id
     from pageviews
     where customer_id is not null
+    and visitor_id is not null
     group by 1,2
 
 )
