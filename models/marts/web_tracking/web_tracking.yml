@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: users
+    columns:
+      - name: visitor_id
+        description: Visitor ID, non-unique, does not contain nulls
+      - name: customer_id
+        description: Customer ID, non-unique, contains nulls
+    
