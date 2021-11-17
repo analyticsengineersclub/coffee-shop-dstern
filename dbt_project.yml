@@ -36,3 +36,11 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
+
+# Point github package at right schema
+
+vars:
+  github_source:
+    github_database: analytics-engineers-club
+    github_schema: github
+  github__using_repo_team: false 
